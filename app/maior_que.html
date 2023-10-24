@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Valor</title>
+    <link rel="stylesheet" href="/css/style_maior.css">
+</head>
+<body>
+    <div id="sob">
+        <h1> Maior valor </h1>
+
+        <button type="submit" onclick="analizar()">Clique para começar</button>
+
+        <section id="relt"></section>
+    </div>
+
+    <script>
+        function analizar(){
+            let x = parseInt(window.prompt("Digite um número"))
+            let y = parseInt(window.prompt("Digite outro número"))
+
+            if(x > y){
+                document.getElementById("relt").innerHTML = `<p> Analizando os números ${x} e ${y}, o maior número é <mark>${x}</mark></p>`
+            }else if (y > x){
+                document.getElementById("relt").innerHTML = `<p> Analizando os números <mark>${x}</mark> e <mark>${y}</mark>, o maior número é <b>${y}</b></p>`
+            }else if(x == y){
+                document.getElementById("relt").innerHTML = `<p style="font-size:40px"> Analizando os números <mark>${x}</mark> e <mark>${y}</mark>, os números são <b>IGUAIS !</b></p>`
+            }else if (Number.isNaN(x) || Number.isNaN(y)){
+                document.getElementById("relt").innerHTML = `<p style="font-size:40px">Digite apenas Números inteiros</p>`
+            }else{
+                console.log("Error")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros JS</title>
+    <link rel="stylesheet" href="css/style_soma.css">
+</head>
+<body>
+
+    <h1>Somando dois números</h1>
+
+    <button type="submit" id="res" onclick="soma()">Clique Aqui</button>
+
+    <section id="soma">
+        <p> O resultado vem aqui..</p>
+    </section>
+    
+    <script>
+        function soma(){
+            let x = Number(window.prompt("Digite um Numero"))
+          
+            if(Number.isInteger(x)){
+                let y = Number(window.prompt("Digite outro Numero"))
+                let soma = x + y
+                
+                document.getElementById("soma").innerHTML = `<p> A Soma desses valores é <b>${soma}!</b>`
+            }else{
+                alert("Apenas números inteiros ou float")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

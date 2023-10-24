@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números JS</title>
+    <link rel="stylesheet" href="style_media.css">
+</head>
+<body>
+    <h1>Média do Aluno</h1>
+
+    <button type="submit" id="media" onclick="media()">Preparado para a desgraça ?</button>
+
+    <section id="nome"></section>
+    <section id="notas"></section>
+    <section id="resultado"></section>
+
+    <script>
+        function media(){
+            let nome =  window.prompt("Digite o seu Nome")
+            let nota1 = parseInt(window.prompt("Digite a Primeira Nota de" + nome))
+            let nota2 = parseInt(window.prompt("Digite a Segunda Nota de" + nome))
+
+            localStorage.setItem("nome", nome)
+            localStorage.setItem("nota1", nota1)
+            localStorage.setItem("nota2", nota2)
+
+            if(nota1 > 10 && nota2 > 10){
+                alert("Numeros apenas até 10")
+            }else{
+                let media_final = (nota1 + nota2)/2
+                localStorage.setItem("media_final", media_final)
+                if(media_final < 6){
+                    alert("Reprovado")
+                }else{
+                    alert("Aprovado")
+                }
+                document.getElementById("nome").innerHTML = `<p> O nome do aluno é <b>${localStorage.nome}</b>`
+                document.getElementById("notas").innerHTML = `<p> As notas do aluno são <b>${localStorage.nota1}</b> e <b>${localStorage.nota2}</b> `
+                document.getElementById("resultado").innerHTML = `<p> A média do aluno é <b>${localStorage.media_final}</b>`
+              
+            }
+        }
+    </script>
+</body>
+</html>

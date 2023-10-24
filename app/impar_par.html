@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É par ou impar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body { font: 12pt Arial; }
+            
+        h1{font-family: 'Pacifico'}
+    </style>
+</head>
+<body>
+    <h1>É par ou é impar ? </h1>
+
+    <button type="submit" id="choose">Clique para iniciar</button>
+
+    <section id="res2"></section>
+
+</body>
+    <script>
+
+        document.getElementById("choose").onclick = function(){
+            var tela = parseInt(window.prompt("Digite um número"))
+
+            if(tela % 2 == 0){
+                console.log("é par meu chapá")
+                document.getElementById("res2").innerHTML = `<p>O número ${tela} que foi digitado é <mark><b>PAR !</b></mark></p>`
+            }else{
+                console.log("é impar meu chapá")
+                document.getElementById("res2").innerHTML = `<p>O número ${tela} que foi digitado é <mark><b>IMPAR !</b></mark></p>`
+            }
+        }
+
+    </script>
+</html>

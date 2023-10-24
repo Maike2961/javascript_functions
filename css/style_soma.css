@@ -1,0 +1,15 @@
+#res{
+    width: 150px;
+    height: 100px;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 550px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#soma{
+    text-align: center;
+}

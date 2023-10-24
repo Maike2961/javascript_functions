@@ -1,0 +1,23 @@
+#media{
+    width: 250px;
+    height: 100px;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 500px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#nome{
+    text-align: center;
+}
+
+#notas{
+    text-align: center;
+}
+
+#resultado{
+    text-align: center;
+}

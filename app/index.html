@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero JS</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <h1>Trabalhando com numeros</h1>
+
+
+    <button type="submit" id="res" onclick="calcular()">Clique aqui</button>
+
+    <section id="res2"></section>
+
+    <script >
+        alert("Welcome to meu site")
+
+        function calcular(){
+            let x = Number(window.prompt("Digite o seu numero"))
+
+            let result = x*x
+            let result2 = x/2
+
+            document.getElementById("res2").innerHTML = `<p> o Valor é ${x}, o multiplo dele é ${result} e a metade dele é ${result2}</p>`
+        }
+
+
+    </script>
+</body>
+</html>

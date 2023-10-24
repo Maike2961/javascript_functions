@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="/css/style_idade.css">
+</head>
+<body>
+    <h1>
+        Time
+    </h1>
+
+    <button type="submit" id="time">Clique</button>
+
+    <section id="resultado"></section>
+</body>
+
+    <script>
+        document.getElementById("time").onclick = function(){
+        const horas = new Date().getFullYear()
+        let ano = (window.prompt("Digite o ano que nasceu ? "))
+        var idade = parseInt(ano)
+     
+        if(ano.length >= 5 || ano.length <= 1 || ano.charAt(0) > 2){
+            document.getElementById("resultado").innerHTML = `<p> Somente ano com quatro digidos e até o ano de 2999</p>`
+        }else if(Number.isNaN(idade)){
+            document.getElementById("resultado").innerHTML = `<p> Digite apenas o ano </p>`    
+        }else{
+            var resultado =  horas - ano
+            document.getElementById("resultado").innerHTML = `<p>Sua Idade é <mark>${resultado}<mark>`
+            }
+        }
+    </script>
+</html>
