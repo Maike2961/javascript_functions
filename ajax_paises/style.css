@@ -1,0 +1,13 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#list{
+    text-align: center;
+    list-style: none;
+    font-size: 15pt;
+}
